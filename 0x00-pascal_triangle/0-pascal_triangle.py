@@ -1,3 +1,7 @@
+#!/usr/bin/python3
+"Pascal's trianle function"
+
+
 def pascal_triangle(n):
     """
     Generates Pascal's triangle up to the specified number of rows.
@@ -14,7 +18,7 @@ def pascal_triangle(n):
 
     if n == 1:
         return [[1]]
-    
+
     if n == 2:
         return [[1], [1, 1]]
 
@@ -27,9 +31,13 @@ def pascal_triangle(n):
         prev_list_len = len(prev_list)
 
         # Use list comprehension for the current row
-        current_list = [1] + [prev_list[i] + prev_list[i + 1] for i in range(prev_list_len - 1)] + [1]
+        current_list = [1] + \
+            [
+                prev_list[i] + prev_list[i + 1]
+                for i in range(prev_list_len - 1)
+            ] + [1]
 
         # Append the current row to the triangle
         pascal_list.append(current_list)
-    
+
     return pascal_list
