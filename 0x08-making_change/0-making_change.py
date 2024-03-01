@@ -1,5 +1,9 @@
 #!/usr/bin/python3
+"""Module Documentation"""
+
+
 def makeChange(coins, total):
+    """Function Documentation"""
     max_val = float('inf')
     table = [[max_val for _ in range(total + 1)] for _ in range(len(coins))]
 
